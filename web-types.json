@@ -1,0 +1,410 @@
+{
+  "$schema": "https://json.schemastore.org/web-types",
+  "name": "genesys-spark-components",
+  "version": "1.0.0",
+  "description": "Genesys Spark Web Components",
+  "framework": "html",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "gux-accordion",
+          "description": "Accordion component",
+          "attributes": [
+            {
+              "name": "single-open-section",
+              "description": "Allow only one section to be open at a time",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-accordion-section",
+          "description": "Accordion section component",
+          "attributes": [
+            {
+              "name": "arrow-position",
+              "description": "Position of the arrow",
+              "value": {
+                "type": "enum",
+                "enum": ["end", "start"]
+              }
+            },
+            {
+              "name": "content-layout",
+              "description": "Layout of the content",
+              "value": {
+                "type": "enum",
+                "enum": ["custom", "text"]
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Whether the section is disabled",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "open",
+              "description": "Whether the section is open",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "reverse-headings",
+              "description": "Reverse the order of headings",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "guxclosed",
+              "description": "Triggered when the section is closed"
+            },
+            {
+              "name": "guxopened",
+              "description": "Triggered when the section is opened"
+            }
+          ]
+        },
+        {
+          "name": "gux-action-button",
+          "description": "Action button component",
+          "attributes": [
+            {
+              "name": "accent",
+              "description": "Button accent style",
+              "value": {
+                "type": "enum",
+                "enum": ["danger", "primary", "secondary", "tertiary"]
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Whether the button is disabled",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "is-open",
+              "description": "Whether the menu is open",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "type",
+              "description": "Button type",
+              "value": {
+                "type": "enum",
+                "enum": ["button", "reset", "submit"]
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "actionClick",
+              "description": "Triggered when the action button is clicked"
+            },
+            {
+              "name": "close",
+              "description": "Triggered when the menu is close"
+            },
+            {
+              "name": "open",
+              "description": "Triggered when the menu is open"
+            }
+          ]
+        },
+        {
+          "name": "gux-button",
+          "description": "Button component",
+          "attributes": [
+            {
+              "name": "accent",
+              "description": "Button accent style",
+              "value": {
+                "type": "enum",
+                "enum": ["danger", "ghost", "inline", "primary", "secondary", "tertiary"]
+              }
+            },
+            {
+              "name": "autofocus",
+              "description": "Whether the button should be focused on page load",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Whether the button is disabled",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "gux-title",
+              "description": "Title attribute for the button",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "type",
+              "description": "Button type",
+              "value": {
+                "type": "enum",
+                "enum": ["button", "reset", "submit"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-badge",
+          "description": "Badge component",
+          "attributes": [
+            {
+              "name": "accent",
+              "description": "Badge accent style",
+              "value": {
+                "type": "enum",
+                "enum": ["error", "info", "inherit", "success", "warning"]
+              }
+            },
+            {
+              "name": "bold",
+              "description": "Whether the badge text should be bold",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-breadcrumbs",
+          "description": "Breadcrumbs navigation component",
+          "attributes": [
+            {
+              "name": "accent",
+              "description": "Breadcrumbs accent style",
+              "value": {
+                "type": "enum",
+                "enum": ["primary", "secondary"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-breadcrumb-item",
+          "description": "Breadcrumb item component",
+          "attributes": [
+            {
+              "name": "href",
+              "description": "URL for the breadcrumb item",
+              "value": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-card",
+          "description": "Card component",
+          "attributes": [
+            {
+              "name": "accent",
+              "description": "Card accent style",
+              "value": {
+                "type": "enum",
+                "enum": ["bordered", "borderless", "raised"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-dropdown",
+          "description": "Dropdown component",
+          "attributes": [
+            {
+              "name": "disabled",
+              "description": "Whether the dropdown is disabled",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "exceed-target-width",
+              "description": "Whether the dropdown can exceed the target width",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "filter-type",
+              "description": "Type of filtering to apply",
+              "value": {
+                "type": "enum",
+                "enum": ["custom", "none", "starts-with"]
+              }
+            },
+            {
+              "name": "has-error",
+              "description": "Whether the dropdown has an error state",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "loading",
+              "description": "Whether the dropdown is in loading state",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "placeholder",
+              "description": "Placeholder text for the dropdown",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "required",
+              "description": "Whether the dropdown is required",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "value",
+              "description": "Value of the dropdown",
+              "value": {
+                "type": "string"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "guxcollapsed",
+              "description": "Triggered when the dropdown is collapsed"
+            },
+            {
+              "name": "guxexpanded",
+              "description": "Triggered when the dropdown is expanded"
+            },
+            {
+              "name": "guxfilter",
+              "description": "Triggered when filtering is applied"
+            }
+          ]
+        },
+        {
+          "name": "gux-icon",
+          "description": "Icon component",
+          "attributes": [
+            {
+              "name": "decorative",
+              "description": "Whether the icon is decorative (not meaningful for screen readers)",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "icon-name",
+              "description": "Name of the icon to display",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "screenreader-text",
+              "description": "Text for screen readers",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "size",
+              "description": "Size of the icon",
+              "value": {
+                "type": "enum",
+                "enum": ["inherit", "large", "medium", "small"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-form-field-checkbox",
+          "description": "Checkbox form field component",
+          "attributes": [
+            {
+              "name": "has-group-disabled",
+              "description": "Whether the checkbox group is disabled",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "has-group-error",
+              "description": "Whether the checkbox group has an error",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "label-position",
+              "description": "Position of the label",
+              "value": {
+                "type": "enum",
+                "enum": ["beside", "screenreader"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "gux-form-field-text-like",
+          "description": "Text input form field component",
+          "attributes": [
+            {
+              "name": "clearable",
+              "description": "Whether the field can be cleared",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "indicator-mark",
+              "description": "Type of indicator mark to show",
+              "value": {
+                "type": "enum",
+                "enum": ["none", "optional", "required"]
+              }
+            },
+            {
+              "name": "label-position",
+              "description": "Position of the label",
+              "value": {
+                "type": "enum",
+                "enum": ["above", "beside", "screenreader"]
+              }
+            },
+            {
+              "name": "loading",
+              "description": "Whether the field is in loading state",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
